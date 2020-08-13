@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hamburger Menu</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="icon">
+		<div class="hamburger"></div>
+	</div>
+
+<script>
+	const icon = document.querySelector('.icon');
+
+	icon.addEventListener('click',function() {
+		// console.log(icon);
+		icon.classList.toggle('active');
+	})
+
+</script>
+</body>
+</html>
