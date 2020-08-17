@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="garis"></div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <script>
+        const garis = document.querySelector('.garis');
+        const getA = document.querySelectorAll('a');
+
+        getA.forEach(function (a) {
+            // console.log(a);
+            a.addEventListener('click',function(e) {
+                garis.style.width = e.target.offsetWidth+'px';
+                garis.style.left = e.target.offsetLeft+'px';
+            })
+        })
+    </script>
+</body>
+</html>

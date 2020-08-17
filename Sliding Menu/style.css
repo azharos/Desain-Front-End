@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+nav{
+    position: relative;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+
+nav .garis{
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: black;
+    transition: 0.5s;
+}
