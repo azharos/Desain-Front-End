@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: salmon;
+}
+
+.container{
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+}
+
+.container .user{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.user .img{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    transition: 0.5s;
+}
+
+.user .img img{
+    width: 100%;
+    height: 100%;
+}
+
+.user .form{
+    transition: 0.5s;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.user .form h2{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.user .form input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid grey;
+    letter-spacing: 2px;
+}
+
+.user .form input[type="submit"]{
+    width:100px;
+    background-color: royalblue;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.user .form p{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: grey;
+    margin-top: 20px;
+}
+
+.user .form p a{
+    text-decoration: none;
+    color: royalblue;
+}
+
+.signup{
+    pointer-events: none;
+}
+
+.active .signup{
+    pointer-events: initial;
+}
+
+
+.signup .form{
+    left:100%;
+}
+.signup .img{
+    left:-100%;
+}
+
+.signin .form, .signin .img{
+    left: 0;
+}
+
+.active .signup .form{
+    left: 0;
+}
+
+.active .signup .img{
+    left: 0;
+}
+
+.active .signin .form{
+    left: 100%;
+}
+.active .signin .img{
+    left: -100%;
+}
+
+@media (max-width:950px){
+    .container{
+        width: 500px;
+    }
+    .user .img{
+        display: none;
+    }
+    .user .form{
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Responsive</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="user signin">
+            <div class="img">
+                <img src="img/1.jpeg" alt="">
+            </div>
+            <div class="form">
+                <form action="">
+                    <h2>Login</h2>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                    <p>Belum Punya Akun? <a href="#">Sign Up.</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="user signup">
+            <div class="form">
+                <form action="">
+                    <h2>Daftar</h2>
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Daftar">
+                    <p>Sudah Punya Akun? <a href="#">Sign In.</a></p>
+                </form>
+            </div>
+            <div class="img">
+                <img src="img/2.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+<script>
+    const container = document.querySelector('.container');
+    const getA = document.querySelectorAll('a');
+
+    getA.forEach(function(a) {
+        // console.log(a);
+        a.addEventListener('click',function() {
+            container.classList.toggle('active');
+        })
+    })
+</script>
+</body>
+</html>
