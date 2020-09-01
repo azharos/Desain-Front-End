@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 5em;
+    color: white;
+}
+.satu{
+    background-color: teal;
+}
+.dua{
+    background-image: url(img/1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200px;
+}
+.tiga{
+    background-color: tomato;
+}
+.empat{
+    height: 400px;
+    background-image: url(img/2.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.lima{
+    background-color: salmon;
+}
