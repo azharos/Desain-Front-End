@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Slide Image CSS</title>
+</head>
+<body>
+    
+    <div class="container">
+        <figure>
+            <img src="img/1.jpeg" alt="">
+        </figure>
+        <div class="slide">
+            <img src="img/1.jpeg" alt="">
+            <img src="img/2.jpeg" alt="">
+            <img src="img/3.jpeg" alt="">
+            <img src="img/4.jpeg" alt="">
+        </div>
+    </div>
+
+    <script>
+        const figureImg = document.querySelector('figure img');
+        const Imgs = document.querySelectorAll('.slide img');
+
+        Imgs.forEach(function(img) {
+            // console.log(img);
+            img.addEventListener('click',function(e) {
+                // console.log(e.target.src);
+                // console.log(figureImg.src);
+                figureImg.src = e.target.src;
+            })
+        })
+    </script>
+</body>
+</html>

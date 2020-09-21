@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.container figure{
+    width: 100%;
+    height: 100vh;
+    line-height: 0;
+}
+figure img{
+    width: 100%;
+    height: 100%;
+}
+.slide{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.slide img{
+    width: 100px;
+    height: 80px;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.slide img:hover{
+    transform: scale(1.3);
+}
