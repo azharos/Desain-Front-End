@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+nav{
+    width: 100%;
+    background-color: darkblue;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 200px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+}
+nav ul li a:hover{
+    background-color: blue;
+}
+nav .menu{
+    display: none;
+}
+@media (max-width:1020px){
+    nav{
+        padding: 0 100px;
+    }
+}
+@media(max-width:760px){
+    nav{
+        position: relative;
+        padding: 0;
+        height: 40px;
+    }
+    nav a{
+        margin-left: 100px;
+    }
+    nav ul{
+        position: absolute;
+        top: 40px;
+        background-color: darkblue;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a{
+        margin: 0;
+    }
+    nav .menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        /* background-color: black; */
+        margin-right: 100px;
+    }
+    nav .menu .toggle{
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        position: relative;
+        transition: 0.5s;
+    }
+    .toggle::before,.toggle::after{
+        content: '';
+        width: 20px;
+        height: 3px;
+        transition: 0.5s;
+        background-color: white;
+        position: absolute;
+    }
+    .toggle::before{
+        top: -5px;
+    }
+    .toggle::after{
+        top: 5px;
+    }
+    nav.active .toggle{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    nav.active .toggle::before{
+        top: 0;
+        transform: rotate(45deg);
+    }
+    nav.active .toggle::after{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    nav.active ul{
+        display: blockN;
+    }
+}
