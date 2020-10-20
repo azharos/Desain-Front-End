@@ -1,0 +1,70 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: teal;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: 85%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card{
+    width: 300px;
+    height: 400px;
+    /* overflow: hidden; */
+    position: relative;
+}
+.card .img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.card .img img{
+    width: 100%;
+    height: 100%;
+}
+.card .content{
+    position: absolute;
+    bottom: 20px;
+    left: 8%;
+    background-color: white;
+    width: 250px;
+    height: 35px;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card .content h3{
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+}
+.card .content p{
+    text-align: justify;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition-delay: 0.5s;
+}
+.card:hover .content{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
+.card:hover .content p{
+    opacity: 1;
+}
