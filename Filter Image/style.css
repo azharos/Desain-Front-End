@@ -1,0 +1,54 @@
+body,h1,ul,li{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #667d8e;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+section{
+    width: 85%;
+    margin: 50px auto;
+}
+section h1{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2em;
+}
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.57);
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+ul li{
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+ul li.active{
+    background-color: rgba(41, 255, 41, 0.897);
+}
+.product{
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product img{
+    width: 200px;
+    height: 180px;
+    margin-bottom: 10px;
+}

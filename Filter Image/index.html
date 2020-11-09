@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <h1>Filter Image</h1>
+        <ul>
+            <li class="active">All Menu</li>
+            <li>Food</li>
+            <li>Car</li>
+            <li>House</li>
+            <li>Travel</li>
+        </ul>
+
+        <div class="product">
+            <img src="img/food1.jpeg" data-filter="food">
+            <img src="img/food2.jpeg" data-filter="food">
+            <img src="img/food3.jpeg" data-filter="food">
+            <img src="img/food4.jpeg" data-filter="food">
+            <img src="img/mobil1.jpeg" data-filter="car">
+            <img src="img/mobil2.jpeg" data-filter="car">
+            <img src="img/mobil3.jpeg" data-filter="car">
+            <img src="img/mobil4.jpeg" data-filter="car">
+            <img src="img/rumah1.jpeg" data-filter="house">
+            <img src="img/rumah2.jpeg" data-filter="house">
+            <img src="img/rumah3.jpeg" data-filter="house">
+            <img src="img/rumah4.jpeg" data-filter="house">
+            <img src="img/travel1.jpeg" data-filter="travel">
+            <img src="img/travel2.jpeg" data-filter="travel">
+            <img src="img/travel3.jpeg" data-filter="travel">
+            <img src="img/travel4.jpeg" data-filter="travel">
+        </div>
+    </section>
+
+    <script>
+        const liItem = document.querySelectorAll('ul li');
+        const imgItem = document.querySelectorAll('.product img');
+
+        liItem.forEach(li => {
+           li.onclick = function() {
+            //active
+            liItem.forEach(li => {
+                li.className = "";
+            })
+            li.className = "active";
+
+            //Filter
+            const value = li.textContent;
+            imgItem.forEach(img => {
+                img.style.display = 'none';
+                if (img.getAttribute('data-filter') == value.toLowerCase() || value == "All Menu") {
+                    img.style.display = 'block';
+                }
+            })
+           }
+        });
+    </script>
+</body>
+</html>
