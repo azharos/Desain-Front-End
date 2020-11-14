@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: purple;
+    font-family: sans-serif;
+}
+.container{
+    width: 85%;
+    height: auto;
+    margin: 50px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+}
+.card .nomor{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    background-image: linear-gradient(45deg,#038a0a,#1b0091);
+    bottom: 0;
+    transition: 0.5s;
+}
+.card .nomor h1{
+    font-size: 10em;
+    color: white;
+    transition: 0.5s;
+}
+.card:hover .nomor{
+    height: 50px;
+}
+.card:hover .nomor h1{
+    font-size: 2.2em;
+}
+.card .nomor::before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.card .content{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.card .content h2{
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+}
+.card .content p{
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+}
+@media(max-width:1108px){
+    .card{
+        margin: 10px;
+    }
+}
+@media(max-width:738px){
+    .container{
+        justify-content: center;
+    }
+}
