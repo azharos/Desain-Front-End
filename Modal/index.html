@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <button id="open">Open Modal</button>
+
+        <div class="modal">
+            <div class="modal-content">
+                <h1>Modal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorem recusandae, itaque sequi eius ea totam molestiae, consectetur blanditiis beatae veritatis tenetur quasi vel praesentium quaerat vero. Sed, alias nostrum?</p>
+                <button id="close">Close Modal</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const open = document.querySelector('#open');
+        const close = document.querySelector('#close');
+        const modal = document.querySelector('.modal');
+
+        open.onclick = function() {
+            modal.classList.add('show');
+        }
+        close.onclick = function() {
+            modal.classList.remove('show');
+        }
+    </script>
+</body>
+</html>
