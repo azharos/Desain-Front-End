@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content p5 JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .content {
+            color: white;
+            width: 80%;
+            height: auto;
+            padding: 10px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            margin-bottom: 10px;
+        }
+
+        canvas {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: white;
+            mix-blend-mode: screen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="content">
+            <h2>Content P5 JS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, temporibus quidem dolor illum ut
+                quibusdam dolorum voluptatibus sed voluptates ea cum fuga perspiciatis, eaque numquam sequi. Quod
+                impedit temporibus aliquid doloremque placeat, pariatur laborum qui, animi rem fuga ipsum officia
+                molestiae modi accusantium, odit sit ullam quaerat odio sequi quos tempore voluptate. Aperiam earum quod
+                ex corporis modi sunt quidem?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit animi id et cupiditate hic optio
+                pariatur magni dignissimos alias vero! Voluptate, aut maxime explicabo dolore adipisci laborum tempora,
+                et nisi, provident veniam quaerat blanditiis dignissimos! At quidem eius quaerat sit aspernatur.
+                Nostrum, laborum. Natus optio itaque enim ea adipisci culpa quae autem reprehenderit. Soluta, facilis
+                unde? Eos asperiores in natus.</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <script>
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+        }
+
+        function draw() {
+            strokeWeight(50);
+            if (mouseIsPressed) {
+                line(mouseX, mouseY, pmouseX, pmouseY)
+            }
+        }
+    </script>
+</body>
+
+</html>
