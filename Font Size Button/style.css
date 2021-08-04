@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 85%;
+    margin: 50px auto;
+}
+
+.button {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.button .btn {
+    border: none;
+    background-color: rgb(224, 224, 224);
+    padding: 3px 5px;
+    margin-left: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.button .btn.btn-sm {
+    font-size: 0.8em;
+}
+
+.button .btn.btn-md {
+    font-size: 1em;
+}
+
+.button .btn.btn-lg {
+    font-size: 1.2em;
+}
+
+.button .btn.active {
+    background-color: black;
+    color: white;
+}
+
+.content h2,
+.content p {
+    transition: 0.8s;
+    margin-bottom: 10px;
+}
+
+.content p {
+    text-align: justify;
+}

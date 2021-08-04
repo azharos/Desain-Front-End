@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Size Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="button">
+            <button type="button" class="btn btn-sm active">A</button>
+            <button type="button" class="btn btn-md">A</button>
+            <button type="button" class="btn btn-lg">A</button>
+        </div>
+        <div class="content">
+            <h2>Font Size Button</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum totam numquam repellendus tempora, animi
+                fugit quis modi assumenda ad aut quisquam nobis officiis atque nulla, saepe enim fuga facere quas.
+                Praesentium porro sint non consequuntur. Eaque voluptatibus amet veniam, aperiam perferendis ducimus aut
+                explicabo dolorum expedita voluptas facere quas officia?
+                <br><br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae adipisci, nesciunt consectetur nam quia
+                itaque asperiores officiis nemo in inventore laboriosam explicabo deleniti placeat possimus doloribus
+                nisi eum odio ullam iusto earum, fugit ducimus similique. Ducimus voluptatem, quas labore pariatur at
+                amet ut iusto quo ea commodi deleniti sequi voluptate?
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Inisialisasi
+        const btns = document.querySelectorAll('.btn');
+        const btnsm = document.querySelector('.btn-sm');
+        const btnmd = document.querySelector('.btn-md');
+        const btnlg = document.querySelector('.btn-lg');
+        const h2 = document.querySelector('.content h2');
+        const p = document.querySelector('.content p');
+
+        btns.forEach(btn => {
+            btn.onclick = function () {
+
+                // active
+                btns.forEach(btn => {
+                    btn.classList.remove('active');
+                })
+                btn.classList.add('active');
+
+                // Font Size
+                switch (btn.classList[1]) {
+                    case 'btn-sm':
+                        h2.style.fontSize = '1.5em';
+                        p.style.fontSize = '1em';
+                        break;
+                    case 'btn-md':
+                        h2.style.fontSize = '1.65em';
+                        p.style.fontSize = '1.15em';
+                        break;
+                    case 'btn-lg':
+                        h2.style.fontSize = '1.8em';
+                        p.style.fontSize = '1.3em';
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
